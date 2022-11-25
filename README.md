@@ -5,8 +5,8 @@ This is a repo that can recognize a continuous frames from video and generate th
 Idx | Content | State | Note
 :------------ | :-------------| :-------------| :-------------
 1 | Split video into frames | :heavy_check_mark: | 
-2 | Remove duplicate or occlusion frame  | :heavy_check_mark: | 
+2 | Select valid frames and remove duplicate, occlusion frames | |
 3 | Recognize frames and generate board, black point and white point | |
 4 | Draw output frame with specific input and output | |
-5 | Generate PDF file
+5 | Generate PDF file | |
 
