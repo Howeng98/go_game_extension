@@ -1,7 +1,7 @@
 import cv2
 import os
 
-cam = cv2.VideoCapture("./samples/GO.mp4")
+cam = cv2.VideoCapture("./samples/GO.MOV")
 
 try:
     if not os.path.exists('data'):
