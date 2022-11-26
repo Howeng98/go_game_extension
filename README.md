@@ -10,6 +10,16 @@ Idx | Content | State | Note
 4 | Draw output frame with specific input and output | |
 5 | Generate PDF file | |
 
-### IDEA
+#### IDEA
 Regarding how to idendity hand location and reflect.
   - Solution: Saved all the reflect coordinates during the first frame (blank board)
+
+#### LOG
+
+11/25
+- Calculate corner pixel and corresponding R,G,B values
+
+11/26
+- Achieved perspective homography transformation
+- GO board line detection
+- TODO: calibration on parameters to obtain a precise detection results
