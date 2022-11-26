@@ -10,3 +10,6 @@ Idx | Content | State | Note
 4 | Draw output frame with specific input and output | |
 5 | Generate PDF file | |
 
+### IDEA
+Regarding how to idendity hand location and reflect.
+  - Solution: Saved all the reflect coordinates during the first frame (blank board)
