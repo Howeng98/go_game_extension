@@ -23,3 +23,7 @@ Regarding how to idendity hand location and reflect.
 - Achieved perspective homography transformation
 - GO board line detection
 - TODO: calibration on parameters to obtain a precise detection results
+
+12/10
+- recognize black and white point
+- some defect error
