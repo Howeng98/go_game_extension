@@ -38,3 +38,6 @@ Regarding how to idendity hand location and reflect.
 - use conventional CV to remove light reflection effect
 - successful detect all pieces with correct outputs
 - generate board with pieces numbers and states
+
+TODO:
+  1. Make a function to handle input array of board state, and draw circles in an standard form
