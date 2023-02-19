@@ -16,29 +16,35 @@ Regarding how to idendity hand location and reflect.
 
 #### LOG
 
-11/25
+### 11/25
 - Calculate corner pixel and corresponding R,G,B values
+---
 
-11/26
+### 11/26
 - Achieved perspective homography transformation
 - GO board line detection
 - TODO: calibration on parameters to obtain a precise detection results
+---
 
-12/10
+### 12/10
 - recognize black and white point
 - some defect error
+---
 
-12/25
+### 12/25
 - use CNN model to generate board coordinates and pieces existence
 - [TOFIX] our model can only detect pieces existence, add labels to show each position condition probability
 - generate board graph with pieces numbers
 - extract board images in PDF format
+---
 
-02/19
+### 02/19
+  
   Accomplished
   - use conventional CV to remove light reflection effect
   - successful detect all pieces with correct outputs
   - generate board with pieces numbers and states
 
   Future Works:
-    - [ ] Make a function to handle input array of board state, and draw circles in an standard form
+  - [ ] Make a function to handle input array of board state, and draw circles in an standard form
+---
