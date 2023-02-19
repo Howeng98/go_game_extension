@@ -35,9 +35,10 @@ Regarding how to idendity hand location and reflect.
 - extract board images in PDF format
 
 02/19
-- use conventional CV to remove light reflection effect
-- successful detect all pieces with correct outputs
-- generate board with pieces numbers and states
+  Accomplished
+  - use conventional CV to remove light reflection effect
+  - successful detect all pieces with correct outputs
+  - generate board with pieces numbers and states
 
-TODO:
-  - [] Make a function to handle input array of board state, and draw circles in an standard form
+  Future Works:
+    - [ ] Make a function to handle input array of board state, and draw circles in an standard form
