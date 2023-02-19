@@ -40,4 +40,4 @@ Regarding how to idendity hand location and reflect.
 - generate board with pieces numbers and states
 
 TODO:
-  1. Make a function to handle input array of board state, and draw circles in an standard form
+  - [] Make a function to handle input array of board state, and draw circles in an standard form
