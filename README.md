@@ -5,10 +5,10 @@ This is a repo that can recognize a continuous frames from video and generate th
 Idx | Content | State | Note
 :------------ | :-------------| :-------------| :-------------
 1 | Split video into frames | :heavy_check_mark: | 
-2 | Select valid frames and remove duplicate, occlusion frames | | let CNN fix it, by adding detail labels
-3 | Recognize frames and generate board, black point and white point | :heavy_check_mark: | only detect pieces, make a version with predict pieces condition
-4 | Draw output frame with specific input and output | :heavy_check_mark: |
-5 | Generate PDF file | :heavy_check_mark: |
+2 | Recognize frames and generate board, black point and white point | :heavy_check_mark: | only detect pieces, make a version with predict pieces condition
+3 | Select valid frames and remove duplicate, occlusion frames | | 
+4 | Draw output frame with specific input and output |  |
+5 | Generate PDF file |  |
 
 #### IDEA
 Regarding how to idendity hand location and reflect.
@@ -33,3 +33,8 @@ Regarding how to idendity hand location and reflect.
 - [TOFIX] our model can only detect pieces existence, add labels to show each position condition probability
 - generate board graph with pieces numbers
 - extract board images in PDF format
+
+02/19
+- use conventional CV to remove light reflection effect
+- successful detect all pieces with correct outputs
+- generate board with pieces numbers and states
