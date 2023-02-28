@@ -1,5 +1,11 @@
-# Go game board recognition
+# Go game board recognition :black_circle: :white_circle:
 This is a repo that can recognize a continuous frames from video and generate the board state into PDF files in ascending.
+
+
+<p align="center">
+  <img src='samples/go_template.png'>
+</p>
+
 
 ## Run
 ```
