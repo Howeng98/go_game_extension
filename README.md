@@ -43,8 +43,14 @@ Regarding how to idendity hand location and reflect.
   Accomplished
   - use conventional CV to remove light reflection effect
   - successful detect all pieces with correct outputs
-  - generate board with pieces numbers and states
-
-  Future Works:
-  - [ ] Make a function to handle input array of board state, and draw circles in an standard form
+  - generate board with pieces numbers and states    
 ---
+
+### 02/28
+
+  Accomplished
+  - Make a function to handle input array of board state, and draw circles in an standard form
+  
+  Future Works:
+  - Consider multiple frames inputs, and update the current board state
+  - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
