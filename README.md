@@ -52,5 +52,5 @@ Regarding how to idendity hand location and reflect.
   - Make a function to handle input array of board state, and draw circles in an standard form
   
   Future Works:
-  - Consider multiple frames inputs, and update the current board state
+  - Consider multiple frames inputs, and update the current board state. (Rewrite function)
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
