@@ -59,6 +59,7 @@ Idx | Content | State | Note
   Future Works:
   - Consider multiple frames inputs, and update the current board state. (Rewrite function)
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
+  - Consider the eaten pieces case
 
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
