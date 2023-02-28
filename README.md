@@ -61,7 +61,8 @@ Idx | Content | State | Note
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
 
 ## References
-1. https://pixspy.com/
-2. https://blog.csdn.net/xufive/article/details/112308533
-3. https://tw511.com/a/01/36832.html
-4. https://auzhu.com/sports/1025003.html
+1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
+2. [Pix Spy](https://pixspy.com/)
+3. https://blog.csdn.net/xufive/article/details/112308533
+4. https://tw511.com/a/01/36832.html
+5. https://auzhu.com/sports/1025003.html
