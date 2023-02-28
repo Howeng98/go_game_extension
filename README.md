@@ -1,21 +1,20 @@
-# go_game_extension
+# Go game board recognition
 This is a repo that can recognize a continuous frames from video and generate the board state into PDF files in ascending.
 
-### TODO list :heavy_check_mark: 
+## Run
+```
+python main.py
+```
+
+## TODO list :heavy_check_mark: 
 Idx | Content | State | Note
 :------------ | :-------------| :-------------| :-------------
 1 | Split video into frames | :heavy_check_mark: | 
 2 | Recognize frames and generate board, black point and white point | :heavy_check_mark: | only detect pieces, make a version with predict pieces condition
 3 | Select valid frames and remove duplicate, occlusion frames | | 
-4 | Draw output frame with specific input and output |  |
+4 | Draw output frame with specific input and output | :heavy_check_mark: |
 5 | Generate PDF file |  |
-
-#### IDEA
-Regarding how to idendity hand location and reflect.
-  - Solution: Saved all the reflect coordinates during the first frame (blank board)
-
-#### LOG
-
+## LOG
 ### 11/25
 - Calculate corner pixel and corresponding R,G,B values
 ---
