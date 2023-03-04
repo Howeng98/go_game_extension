@@ -55,11 +55,22 @@ Idx | Content | State | Note
 
   Accomplished
   - Make a function to handle input array of board state, and draw circles in an standard form
-  
-  Future Works:
+
+---
+### 03/04
+Accomplished
   - Consider multiple frames inputs, and update the current board state. (Rewrite function)
+  - Ensure pieces algo is accurate without hand cases.
+  
+  Future Works:  
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
-  - Consider the eaten pieces case
+  - Consider the eaten pieces case and label
+  - Output into PDF format
+    
+  TODO and Discussions:
+  - Remove hand case by checking pixel RGB values and remove hand frames
+  - Remove redundant frames by adding delay into videocaptured
+  
 
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
@@ -67,3 +78,4 @@ Idx | Content | State | Note
 3. https://blog.csdn.net/xufive/article/details/112308533
 4. https://tw511.com/a/01/36832.html
 5. https://auzhu.com/sports/1025003.html
+
