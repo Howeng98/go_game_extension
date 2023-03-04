@@ -68,8 +68,10 @@ Accomplished
   - Output into PDF format
     
   TODO and Discussions:
-  - Remove hand case by checking pixel RGB values and remove hand frames
-  - Remove redundant frames by adding delay into videocaptured
+  - Remove hand case by checking pixel RGB values and remove hand frames (Ho)
+  - Remove redundant frames by adding delay into videocaptured (Zac)  
+  - Output board and string information into PDF (Zac)
+  
   
 
 ## References
