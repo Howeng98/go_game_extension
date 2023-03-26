@@ -6,6 +6,7 @@ import os
 from glob import glob
 import re
 
+
 def reduce_highlights(img):
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
     ret, thresh = cv2.threshold(img_gray, 200, 255, 0)  
@@ -37,7 +38,7 @@ def main():
 
         print(IMG_PATH)
         root_img = cv2.imread(IMG_PATH)
-        root_img = cv2.cvtColor(root_img, cv2.COLOR_BGR2RGB)
+        # root_img = cv2.cvtColor(root_img, cv2.COLOR_BGR2RGB)
         img = reduce_highlights(root_img)
 
         gray = cv2.cvtColor(root_img, cv2.COLOR_BGR2GRAY)

@@ -3,6 +3,8 @@ import numpy as np
 
 os.system('')
 
+
+cv2.imwrite('./output.png', img)
 def read_and_preprocess_img(IMG_PATH):
     
     img = cv2.imread(IMG_PATH)
