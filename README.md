@@ -72,6 +72,18 @@ Accomplished
   - Remove redundant frames by adding delay into videocaptured (Zac)  
   - Output board and string information into PDF (Zac)
   
+---
+### 03/26
+Accomplished
+  - Remove redundant frames by adding delay into videocaptured (Zac)  
+  - Output board and string information into PDF (Zac)
+  
+  Future Works:  
+  - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
+  - Consider the eaten pieces case and label
+    
+  TODO and Discussions:
+  - Remove hand case by checking pixel RGB values and remove hand frames
   
 
 ## References
