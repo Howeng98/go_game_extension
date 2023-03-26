@@ -3,7 +3,7 @@ This is a repo that can recognize a continuous frames from video and generate th
 
 
 <p align="center">
-  <img src='samples/output.png'>
+  <img src='imgs/output.png'>
 </p>
 
 
