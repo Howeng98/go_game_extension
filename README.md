@@ -85,7 +85,15 @@ Accomplished
   TODO and Discussions:
   - Remove hand case by checking pixel RGB values and remove hand frames
   
-
+---
+### 04/02
+Accomplished    
+  - Consider the eaten pieces case and label
+  
+  Future Works:  
+  - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
+  - My dict need to store peices color and counter number, build a global board to store the pieces coming time.
+    
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
 2. [Pix Spy](https://pixspy.com/)
