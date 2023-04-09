@@ -94,6 +94,16 @@ Accomplished
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
   - My dict need to store peices color and counter number, build a global board to store the pieces coming time.
     
+---
+### 04/09
+Accomplished    
+  - Fix global array with eaten pieces case.
+  
+  Future Works:  
+  - PDF write eaten pieces statement
+  - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
+
+
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
 2. [Pix Spy](https://pixspy.com/)
