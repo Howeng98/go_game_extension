@@ -103,6 +103,15 @@ Accomplished
   - PDF write eaten pieces statement
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
 
+---
+### 04/16
+Accomplished    
+  - PDF write eaten pieces statement
+  
+  Future Works:  
+  - Reunion all the components
+  - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
+
 
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
