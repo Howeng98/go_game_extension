@@ -116,7 +116,8 @@ Accomplished
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
 2. [Pix Spy](https://pixspy.com/)
-3. https://blog.csdn.net/xufive/article/details/112308533
-4. https://tw511.com/a/01/36832.html
-5. https://auzhu.com/sports/1025003.html
+3. [PDF Generate](https://github.com/PyFPDF/fpdf2)
+4. [PDF Generate Document](https://pyfpdf.github.io/fpdf2/Shapes.html)
+6. https://tw511.com/a/01/36832.html
+7. https://auzhu.com/sports/1025003.html
 
