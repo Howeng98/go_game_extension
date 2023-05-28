@@ -112,6 +112,8 @@ Accomplished
   - Reunion all the components
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
 
+### 05/28
+  - 
 
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
