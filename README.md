@@ -113,7 +113,12 @@ Accomplished
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
 
 ### 05/28
-  - 
+  - Rearange code
+
+---
+### 06/23
+Accomplished    
+  - Add CLIP to detect hand occlusion
 
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
