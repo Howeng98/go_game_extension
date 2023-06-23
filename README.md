@@ -119,6 +119,10 @@ Accomplished
 ### 06/23
 Accomplished    
   - Add CLIP to detect hand occlusion
+  - Select the first frame from each bundle as prediction results
+
+Discussion
+  - How to decide bundle results: (i) Max of W&B pieces combination bundle (ii) Min of pieces count in bundle (iii) First frame of bundle
 
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
