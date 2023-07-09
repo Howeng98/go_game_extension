@@ -127,8 +127,13 @@ Discussion
 ---
 ### 07/09
 Accomplished    
-  - 
+  - Draw pieces
+  - Convert read_pic.ipynb into read_pic.py to import global variables into draw_test.py
 
+Available Fonts
+  - (Fonts package names)[https://github.com/PyFPDF/fpdf2/tree/master/test/fonts]
+  - (Standard Fonts)[https://github.com/PyFPDF/fpdf2/blob/d184acf862f0bf90025c5bf8103f5b436fc41b52/fpdf/fonts.py#L217C7-L217C7]
+  - (How to import add new Fonts type and use it)[https://github.com/PyFPDF/fpdf2/issues/21#issuecomment-757987071]
 
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
