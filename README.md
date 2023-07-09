@@ -113,7 +113,7 @@ Accomplished
   - Solve the hand occlusion problem by checking the saved global board to detect whether have any missing pieces 
 
 ### 05/28
-  - Rearange code
+  - Rearrange code
 
 ---
 ### 06/23
@@ -123,6 +123,12 @@ Accomplished
 
 Discussion
   - How to decide bundle results: (i) Max of W&B pieces combination bundle (ii) Min of pieces count in bundle (iii) First frame of bundle
+
+---
+### 07/09
+Accomplished    
+  - 
+
 
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
