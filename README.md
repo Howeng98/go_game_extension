@@ -135,6 +135,14 @@ Available Fonts
   - [Standard Fonts](https://github.com/PyFPDF/fpdf2/blob/d184acf862f0bf90025c5bf8103f5b436fc41b52/fpdf/fonts.py#L217C7-L217C7)
   - [How to import add new Fonts type and use it](https://github.com/PyFPDF/fpdf2/issues/21#issuecomment-757987071)
 
+---
+### 07/16
+Accomplished    
+  - Draw the status of the eaten piece in a PDF file.    
+
+Future Works
+  - Bug: For other video input (GO2.mp4), find some way to solve fixed warp perspective coordinates. (This error may cause perspective bias and make piece detection fail.)
+
 ## References
 1. [Kifu Snap](https://www.crazy-sensei.com/?lang=en)
 2. [Pix Spy](https://pixspy.com/)
