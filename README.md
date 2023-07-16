@@ -7,10 +7,15 @@ This is a repo that can recognize a continuous frames from video and generate th
 </p>
 
 
-## Run
+## How to Run
 ```
+python extract_frames.py
+python hand_occlusion_CLIP.py
 python main.py
+read_pic.ipynb
 ```
+
+
 
 ## TODO list :heavy_check_mark: 
 Idx | Content | State | Note
