@@ -48,14 +48,18 @@ def reduce_highlights(img):
 
 def generate_output(array, counter):
     
-    img = cv2.imread('./samples/board.png')
-    
+    img = cv2.imread('./samples/Board.png')
+    #img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    #img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    #outside_center_coordinates = (750,750) #44
     white_sequence_number = 2
     black_sequence_number = 1
 
+
     total_blackNum = 0
     total_whiteNum = 0
-
+    
     my_dict = {}
     #center_coordinate = (548, 548)
     #left_top_coordinate = (44, 45)
@@ -69,13 +73,13 @@ def generate_output(array, counter):
             my_dict[(i, j)] = array[i][j] #0/1/2
 
             if array[i][j] != 0:
-                # print("array[i][j] != 0")
-                # print("global_len", len(global_array[i][j]))
+                #print("array[i][j] != 0")
+                #print("global_len: ", len(global_array[i][j]))
 
                 if len(global_array[i][j]) == 1:
-                    # print("global len == 1")
+                    #print("global len == 1")
                     counter = counter + 1
-                    # print("counter: ", counter)
+                    #print("counter: ", counter)
 
                     global_array[i][j].append((array[i][j], counter))
 
@@ -127,12 +131,12 @@ def generate_output(array, counter):
         #img = cv2.circle(img, White_board_coordinate, radius, (255, 255, 255), thinkness)
         total_whiteNum += 1
 
-    # print("黑棋總數量: ", total_blackNum)
-    # print("白棋總數量: ", total_whiteNum)
+    #print("黑棋總數量: ", total_blackNum)
+    #print("白棋總數量: ", total_whiteNum)
 
     #===========================================================================
 
-    #========== Draw ===============
+    #========== Draw ===============    
     for i in range(len(Black_board_coordinate)): #draw black
 
         #print(Black_board_coordinate[i][0])
@@ -144,26 +148,36 @@ def generate_output(array, counter):
         img = cv2.circle(img, White_board_coordinate[i], radius, (0, 0, 0), 2)
 
     for i in range(len(Black_board_coordinate)): #black number
-        coordinate = (Black_board_coordinate[i][0]-14 , Black_board_coordinate[i][1] + 15),
-        fontScale = 1.4
-        if black_sequence_number >= 10:
+        if counter < 10:
+            coordinate = (Black_board_coordinate[i][0]-14 , Black_board_coordinate[i][1] + 15),
+            fontScale = 1.4
+        #print(Black_board_coordinate[i])
+        if counter >= 10:
             fontScale = 1.1
             coordinate = (Black_board_coordinate[i][0]-24 , Black_board_coordinate[i][1] + 12),
-        img = cv2.putText(img, str(black_sequence_number), coordinate[0], fontFace, fontScale, (250,250,250), number_thinkness, lineType)
-        black_sequence_number += 2
+        img = cv2.putText(img, str(global_array[Black[i][0]][Black[i][1]][1][1]), coordinate[0], fontFace, fontScale, (250,250,250), number_thinkness, lineType)
+        #counter += 2
 
     for i in range(len(White_board_coordinate)): #white number
-        coordinate = (White_board_coordinate[i][0]-14 , White_board_coordinate[i][1] + 15),
-        fontScale = 1.4
-        if white_sequence_number >= 10:
+        if counter < 10:
+            coordinate = (White_board_coordinate[i][0]-14 , White_board_coordinate[i][1] + 15),
+            fontScale = 1.4
+            img = cv2.putText(img, str(global_array[White[i][0]][White[i][1]][1][1]), coordinate[0], fontFace, fontScale, (0,0,0), number_thinkness, lineType)
+        else:
             fontScale = 1.1
             coordinate = (White_board_coordinate[i][0]-24 , White_board_coordinate[i][1] + 12),
-        img = cv2.putText(img, str(white_sequence_number), coordinate[0], fontFace, fontScale, (0,0,0), number_thinkness, lineType)
-        white_sequence_number += 2
-    #=================================    
-    cv2.imwrite('output.png', img)
-    # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    # plt.imshow(img)
+            img = cv2.putText(img, str(global_array[White[i][0]][White[i][1]][1][1]), coordinate[0], fontFace, fontScale, (0,0,0), number_thinkness, lineType)
+        #white_sequence_number += 2
+
+    # for i in range(counter):
+    #     if counter < 10:
+    #         fontScale = 1.4
+    #         if counter %2 != 0: #black
+    #             img = cv2.putText(img)
+
+    #=================================
+    cv2.imwrite('final_output.png', img)
+    # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  
     # plt.show()  
 
     return counter
@@ -173,7 +187,7 @@ def generate_output(array, counter):
 def main():    
     counter = 0
     
-    DATA_DIR = './pure_data'
+    DATA_DIR = './GO_2_pure_data'
     IMG_PATHS = glob(os.path.join(DATA_DIR, '*.jpg'))
     
     # IMG_PATHS = ['./data/frame30.jpg', './data/frame164.jpg', './data/frame243.jpg', './data/frame250.jpg', './data/frame392.jpg', './data/frame555.jpg', './data/frame687.jpg', './data/frame821.jpg', './data/frame1000.jpg']
@@ -189,6 +203,12 @@ def main():
     valid_bundle_interval = 10
     
     for IMG_PATH in tqdm(IMG_PATHS):
+        current_bundle = int(os.path.basename(IMG_PATH).replace("frame_", "").replace(".jpg", ""))
+        if (prev_bundle is None and len(bundle_result) == 0) or (current_bundle - prev_bundle > valid_bundle_interval):
+            prev_bundle = current_bundle
+        else:
+            prev_bundle = current_bundle
+            continue
         
         root_img = cv2.imread(IMG_PATH)
         # root_img = cv2.cvtColor(root_img, cv2.COLOR_BGR2RGB)
@@ -256,22 +276,22 @@ def main():
 
         # GO board prediction
         tqdm.write("IMG_NAMES: {} | 白棋：{} |  黑棋：{}\n".format(os.path.basename(IMG_PATH), white_count, black_count))
-        
+        bundle_result.append((IMG_PATH, white_count, black_count, board_condition)) 
         
         # Calibrate pieces prediction
-        current_bundle = int(os.path.basename(IMG_PATH).replace("frame", "").replace(".jpg", ""))
-        if prev_bundle is None and len(bundle_result) == 0:                        
-            bundle_result.append((IMG_PATH, white_count, black_count, board_condition)) 
-            prev_bundle = current_bundle           
-        else:            
-            if current_bundle - prev_bundle > valid_bundle_interval: #check whether is consecutive frames of bundle
-                bundle_result.append((IMG_PATH, white_count, black_count, board_condition))
-            else: # next of bundle                
-                pass
-            prev_bundle = current_bundle
-        # print(board_condition)        
+        # current_bundle = int(os.path.basename(IMG_PATH).replace("frame_", "").replace(".jpg", ""))
+        # if prev_bundle is None and len(bundle_result) == 0:                        
+        #     bundle_result.append((IMG_PATH, white_count, black_count, board_condition)) 
+        #     prev_bundle = current_bundle
+        # else:         
+        #     if current_bundle - prev_bundle > valid_bundle_interval: #check whether is consecutive frames of bundle
+        #         bundle_result.append((IMG_PATH, white_count, black_count, board_condition))
+        #     else: # next of bundle                
+        #         pass
+        #     prev_bundle = current_bundle
+        # print(board_condition)
     
-    # print(bundle_result)
+    print(bundle_result)
     
     for result in bundle_result:
         board_condition = result[3] # [IMG_PATH, white_count, black_count, board_condition]

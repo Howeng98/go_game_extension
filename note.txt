@@ -1,0 +1,15 @@
+Documents
+
+# extract_frame.py (V)
+Extract frame from the input video mp4 file.
+
+# hand_occlusion_CLIP.py (V)
+Remove redundant and hand occlusion frames to reduce error rate.
+
+# main.py 
+Detect black and white pieces, return each pieces coordinates（19*19） 
+(skip consecutive frames, only consider non-consecutive)
+
+# read_pic.ipynb
+generate pdf!!!!
+

@@ -16,12 +16,12 @@ model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrai
 tokenizer = open_clip.get_tokenizer('ViT-B-32')
 
 # 
-TARGET_DATA_DIR = './pure_data'
+TARGET_DATA_DIR = './GO_2_pure_data'
 if os.path.exists(TARGET_DATA_DIR):
     shutil.rmtree(TARGET_DATA_DIR)
-    os.makedirs(TARGET_DATA_DIR)
+os.mkdir(TARGET_DATA_DIR)
 
-ROOT_DATA_DIR = './data2'
+ROOT_DATA_DIR = './GO_2_frames'
 IMG_PATHS = glob(os.path.join(ROOT_DATA_DIR, '*.jpg'))
 IMG_PATHS.sort(key=lambda f: int(re.sub('\D', '', f)))
 
@@ -45,9 +45,8 @@ for IMG_PATH in IMG_PATHS:
         text_probs = (10000.0 * image_features @ text_features.T).softmax(dim=-1)        
         
         print("Path: {}  Label probs{}".format(IMG_PATH, text_probs))
-        
-        if text_probs[0][0] != 0.0:
-            # print("Path: {}  Label probs{}".format(IMG_PATH, text_probs))            
+        # print("Path: {}  Label probs{}".format(IMG_PATH, text_probs))            
+        if text_probs[0][0] != 0.0:            
             discard_image_path_list.append(os.path.basename(IMG_PATH))
         else:
             shutil.copy(IMG_PATH, os.path.join(TARGET_DATA_DIR, os.path.basename(IMG_PATH)))
