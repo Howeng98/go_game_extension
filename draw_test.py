@@ -13,7 +13,7 @@ def create_pdf(filename, player_name1, player_name2, result, img, img2):
     text_y_coor = 221
 
 
-
+    isLessThanTen = False
     # Create a new PDF object with A4 size (210x297 mm)
     pdf = FPDF(format='A4')
 
@@ -25,7 +25,7 @@ def create_pdf(filename, player_name1, player_name2, result, img, img2):
 
     # Write text on the header line
     pdf.set_y(15)  # Set the y-coordinate for writing text
-    pdf.cell(0, 10, txt="GO Report",align="C")
+    pdf.cell(0, -5, txt="GO Report",align="C")
 
     # Draw a line for the header
     pdf.set_line_width(0.5)
@@ -68,19 +68,29 @@ def create_pdf(filename, player_name1, player_name2, result, img, img2):
 
     pdf.set_font_size(16) 
     sequence = 1
-    while sequence < 25:
+    while sequence < 25: #Condition of total
         for row in range(19):
             for col in range(19):
                 #print("test")
                 if len(global_array[row][col]) > 2: #eaten peice
+                    print("eaten pieces")
+
                     if global_array[row][col][2][1] == sequence:
-                        print(global_array[row][col][:])
+                        #print(global_array[row][col][:])
                         #print("Black")
                         for i in range(2,len(global_array[row][col])):
+
+                            #===========================================
                             if global_array[row][col][i][1] > 9:
                                 pdf.set_font_size(14)
+                                small_x_move = 0.6
+                                small_y_move = 4.98
                             else:
                                 pdf.set_font_size(16)
+
+                                small_x_move = 1.5
+                                small_y_move = 5.2
+                            #===========================================
 
                             if global_array[row][col][i][0] == 1: #black
 
@@ -90,7 +100,7 @@ def create_pdf(filename, player_name1, player_name2, result, img, img2):
 
                                 pdf.set_text_color(255,255,255)
                                 #pdf.set_font_size(14)
-                                pdf.text(circle_x_coor + 0.75 ,circle_y_coor + 4.98, str(global_array[row][col][i][1]))
+                                pdf.text(circle_x_coor + small_x_move ,circle_y_coor + small_y_move, str(global_array[row][col][i][1]))
 
                                 circle_x_coor += 10
                             else:
@@ -99,14 +109,18 @@ def create_pdf(filename, player_name1, player_name2, result, img, img2):
                                 pdf.circle(circle_x_coor,circle_y_coor,6.8,style=None)
 
                                 pdf.set_text_color(0)
-                                pdf.text(circle_x_coor + 0.75 ,circle_y_coor + 4.98, str(global_array[row][col][i][1]))
+                                pdf.text(circle_x_coor + small_x_move ,circle_y_coor + small_y_move, str(global_array[row][col][i][1]))
 
                                 circle_x_coor += 10
                         
-                        print("hellow")
+                        #print("hellow")
                         pdf.set_text_color(0)
                         pdf.text(circle_x_coor, circle_y_coor + 5, " = ")
                         circle_x_coor += 10
+
+                        if global_array[row][col][1][1] < 10: #setting font 
+                            pdf.set_font_size(16)
+                            isLessThanTen = True
 
                         if global_array[row][col][1][0] == 1: #black   
                             pdf.set_fill_color(r=0,g=0,b=0)
@@ -114,14 +128,21 @@ def create_pdf(filename, player_name1, player_name2, result, img, img2):
 
                             pdf.set_text_color(255,255,255)
                             #pdf.set_font_size(14)
-                            pdf.text(circle_x_coor + 0.75 ,circle_y_coor + 4.98, str(global_array[row][col][1][1]))                      
+                            if (isLessThanTen):
+                                pdf.text(circle_x_coor + 1.8 ,circle_y_coor + 5.2, str(global_array[row][col][1][1]))
+                            else:
+                                pdf.text(circle_x_coor + 0.75 ,circle_y_coor + 4.98, str(global_array[row][col][1][1]))                      
 
                         else: #white
                             pdf.set_fill_color(0)
                             pdf.circle(circle_x_coor,circle_y_coor,6.8,style=None)
-
                             pdf.set_text_color(0)
-                            pdf.text(circle_x_coor + 0.75 ,circle_y_coor + 4.98, str(global_array[row][col][1][1]))                        
+
+                            if (isLessThanTen):
+                                pdf.text(circle_x_coor + 1.8 ,circle_y_coor + 5.2, str(global_array[row][col][1][1])) 
+                            else:
+                                pdf.text(circle_x_coor + 0.75 ,circle_y_coor + 4.98, str(global_array[row][col][1][1]))            
+
                             circle_y_coor += 3
                         
                         print("rounded!!!")
