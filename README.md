@@ -22,9 +22,9 @@ Idx | Content | State | Note
 :------------ | :-------------| :-------------| :-------------
 1 | Split video into frames | :heavy_check_mark: | 
 2 | Recognize frames and generate board, black point and white point | :heavy_check_mark: | only detect pieces, make a version with predict pieces condition
-3 | Select valid frames and remove duplicate, occlusion frames | | 
+3 | Select valid frames and remove duplicate, occlusion frames |:heavy_check_mark: |
 4 | Draw output frame with specific input and output | :heavy_check_mark: |
-5 | Generate PDF file |  |
+5 | Generate PDF file | :heavy_check_mark: |
 ## LOG
 ### 11/25
 - Calculate corner pixel and corresponding R,G,B values
